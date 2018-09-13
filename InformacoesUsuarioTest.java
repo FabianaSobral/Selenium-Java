@@ -13,7 +13,7 @@ public class InformacoesUsuarioTest {
     @Test
     public void testAdcionarUmaInformacaoAdicionalDeUsuario () {
         //Abrindo o navegador
-        System.setProperty("webdriver.chrome.driver","C:\\Users\\Drivers\\Teste\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver","C:\\Users\\Drivers\\chromedriver.exe");
         WebDriver navegador = new ChromeDriver();
 
         //Navegando para a página Taskit
@@ -22,27 +22,18 @@ public class InformacoesUsuarioTest {
         //Clicar no link com texto "Sign In"
         navegador.findElement(By.linkText("Sign in")).click();
 
-        // Identificando o formulario de "Login"
-        WebElement formularioSignInBox =navegador.findElement(By.id("signinbox"));
+        //Clicar no campo com nome "Login"
+         WebElement formulatioSignInBox = navegador.findElement (By.id("signibox"));
 
         //Digitar no campo com nome "Login" o texto "julio0001"
-        formularioSignInBox.findElement(By.name("login")).sendKeys("julio0001");
-
+        //Clicar no campo com nome "Password"
         //Digitar no campo com nome "Password" o texto "123456"
-        formularioSignInBox.findElement(By.name("password")).sendKeys("123456");
-
-
         //Clicar no link com texto "Sign In"
-        navegador.findElement(By.linkText("SIGN IN")).click();
-
-
         //Validar que dentro do elemento com class "me" está o textp "Hi, Julio"
         //Fechar o navegador
 
         //Validação
-        assertEquals( '1', '1' );
-
-
+       assertEquals( '1', '1' );
 
     }
 
